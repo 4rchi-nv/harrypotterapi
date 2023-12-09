@@ -1,25 +1,33 @@
 * {
-    margin: 0;padding: 0;box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 :root {
     --primary: #670a8f;
     --secondary: #8a18bb;
     --light: #fff;
     --font-primary: Arial, Helvetica, sans-serif;
 }
+
 ::-webkit-scrollbar {
     width: 10px;
 }
+
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
+
 ::-webkit-scrollbar-thumb {
     background: var(--primary);
     border-radius: 3px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: var(--secondary);
 }
+
 .moviesContainer {
     font-family: var(--font-primary);
     background: linear-gradient(#161616, #130d21);
@@ -32,42 +40,53 @@
     overflow: hidden;
     min-height: 100vh;
 }
-.moviesContainer .loader div:nth-child(1){
-    animation-delay:200ms;
+
+.moviesContainer .loader div:nth-child(1) {
+    animation-delay: 200ms;
 }
-.moviesContainer .loader div:nth-child(2){
-    animation-delay:400ms;
+
+.moviesContainer .loader div:nth-child(2) {
+    animation-delay: 400ms;
 }
-.moviesContainer .loader div:nth-child(3){
-    animation-delay:600ms;
+
+.moviesContainer .loader div:nth-child(3) {
+    animation-delay: 600ms;
 }
-.moviesContainer .loader div:nth-child(4){
-    animation-delay:800ms;
+
+.moviesContainer .loader div:nth-child(4) {
+    animation-delay: 800ms;
 }
-.moviesContainer .loader div:nth-child(5){
-    animation-delay:1000ms;
+
+.moviesContainer .loader div:nth-child(5) {
+    animation-delay: 1000ms;
 }
-.moviesContainer .loader div:nth-child(6){
-    animation-delay:1200ms;
+
+.moviesContainer .loader div:nth-child(6) {
+    animation-delay: 1200ms;
 }
-.moviesContainer .loader div:nth-child(7){
-    animation-delay:1400ms;
+
+.moviesContainer .loader div:nth-child(7) {
+    animation-delay: 1400ms;
 }
-.moviesContainer .loader div:nth-child(8){
-    animation-delay:1600ms;
+
+.moviesContainer .loader div:nth-child(8) {
+    animation-delay: 1600ms;
 }
-.moviesContainer .loader div:nth-child(9){
-    animation-delay:1800ms;
+
+.moviesContainer .loader div:nth-child(9) {
+    animation-delay: 1800ms;
 }
+
 .moviesContainer .loader {
     background: linear-gradient(#161616, #123);
     width: 100vw;
 }
-.moviesContainer .loader div{
+
+.moviesContainer .loader div {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 0;
     height: 0;
     border-radius: 100%;
@@ -75,17 +94,20 @@
     border: 1px solid #686ffd;
     animation: anim 4s infinite linear;
 }
+
 @keyframes anim {
-    0%{
+    0% {
         opacity: 0.0;
         width: 0vmin;
         height: 0vmin;
     }
-    10%{
+
+    10% {
         opacity: 0.5;
     }
-    100%{
-        opacity:0.0;
+
+    100% {
+        opacity: 0.0;
         width: 50vmin;
         height: 50vmin;
     }

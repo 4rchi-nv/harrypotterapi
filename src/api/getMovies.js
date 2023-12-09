@@ -5,9 +5,9 @@ export const fetchMovies = async () => {
         method: 'GET',
         url: 'https://api.potterdb.com/v1/movies',
     })
-    .then(response => response.data)
-    .catch(error => {
-        console.error('Failed to fetch', error.message);
-        throw error;
-    });
+        .then(response => response.data)
+        .catch(error => {
+            console.error('Failed to fetch', error.message);
+            throw error;
+        });
 };

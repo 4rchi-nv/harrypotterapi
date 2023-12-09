@@ -1,9 +1,9 @@
 import { MoviesList } from "../movies/movies";
 
 export const App = () => {
-    return(
+    return (
         <>
-        <MoviesList />
+            <MoviesList />
         </>
     )
 }
