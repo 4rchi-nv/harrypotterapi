@@ -1,25 +1,33 @@
 * {
-    margin: 0;padding: 0;box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 :root {
     --primary: #670a8f;
     --secondary: #8a18bb;
     --light: #fff;
     --font-primary: Arial, Helvetica, sans-serif;
 }
+
 ::-webkit-scrollbar {
     width: 10px;
 }
+
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
+
 ::-webkit-scrollbar-thumb {
     background: var(--primary);
     border-radius: 3px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: var(--secondary);
 }
+
 .moviesContainer {
     font-family: var(--font-primary);
     background: linear-gradient(#161616, #130d21);
@@ -32,97 +40,53 @@
     overflow: hidden;
     min-height: 100vh;
 }
-.moviesContainer h1 {
-    text-align: center;
-    font-size: 4rem;
-    margin-top: 1rem;
+
+.moviesContainer .loader div:nth-child(1) {
+    animation-delay: 200ms;
 }
-.moviesContainer h1::before, .moviesContainer h1::after {
-    content: "";
-    width: 50px;
-    height: .7rem;
-    background: rgba(214, 214, 214, .5);
-    display: inline-block;
+
+.moviesContainer .loader div:nth-child(2) {
+    animation-delay: 400ms;
 }
-.moviesContainer h1::before {
-    margin: 0 15px 10px 0;
+
+.moviesContainer .loader div:nth-child(3) {
+    animation-delay: 600ms;
 }
-.moviesContainer h1::after {
-    margin: 0 0 10px 15px;
+
+.moviesContainer .loader div:nth-child(4) {
+    animation-delay: 800ms;
 }
-.moviesContainer .movie-card {
-    display: flex;
-    max-width: calc(2/3*100%);
+
+.moviesContainer .loader div:nth-child(5) {
+    animation-delay: 1000ms;
 }
-.moviesContainer .movie-card img {
-    height: 60vh;
-    }
-.moviesContainer .movie-card .movie-details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+
+.moviesContainer .loader div:nth-child(6) {
+    animation-delay: 1200ms;
 }
-.moviesContainer .movie-card .movie-details h2 {
-    border-bottom: var(--primary) dotted .4rem;
-    font-size: 3rem;
+
+.moviesContainer .loader div:nth-child(7) {
+    animation-delay: 1400ms;
 }
-.moviesContainer .movie-card .movie-details  {
-    font-size: 1.5rem;
-    line-height: 2rem;
+
+.moviesContainer .loader div:nth-child(8) {
+    animation-delay: 1600ms;
 }
-.moviesContainer .movie-card .movie-details p:not(.summary) span:nth-child(1) {
-    font-weight: 600;
-} 
-.moviesContainer .movie-card .movie-details p:not(.summary) span:nth-child(2){
-    border-bottom: .2rem var(--secondary) solid;
+
+.moviesContainer .loader div:nth-child(9) {
+    animation-delay: 1800ms;
 }
-.moviesContainer .movie-card .movie-details a {
-    text-decoration: none;
-    color: var(--light);
-    transition: .5s;
-}
-.moviesContainer .movie-card .movie-details a:hover{
-    color: var(--secondary);
-    transform: scale(1.15);
-}
-.moviesContainer .loader div:nth-child(1){
-    animation-delay:200ms;
-}
-.moviesContainer .loader div:nth-child(2){
-    animation-delay:400ms;
-}
-.moviesContainer .loader div:nth-child(3){
-    animation-delay:600ms;
-}
-.moviesContainer .loader div:nth-child(4){
-    animation-delay:800ms;
-}
-.moviesContainer .loader div:nth-child(5){
-    animation-delay:1000ms;
-}
-.moviesContainer .loader div:nth-child(6){
-    animation-delay:1200ms;
-}
-.moviesContainer .loader div:nth-child(7){
-    animation-delay:1400ms;
-}
-.moviesContainer .loader div:nth-child(8){
-    animation-delay:1600ms;
-}
-.moviesContainer .loader div:nth-child(9){
-    animation-delay:1800ms;
-}
+
 .moviesContainer .loader {
     background: linear-gradient(#161616, #123);
     width: 100vw;
 }
-.moviesContainer .loader div{
+
+.moviesContainer .loader div {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 0;
     height: 0;
     border-radius: 100%;
@@ -130,105 +94,21 @@
     border: 1px solid #686ffd;
     animation: anim 4s infinite linear;
 }
+
 @keyframes anim {
-    0%{
+    0% {
         opacity: 0.0;
         width: 0vmin;
         height: 0vmin;
     }
-    10%{
+
+    10% {
         opacity: 0.5;
     }
-    100%{
-        opacity:0.0;
+
+    100% {
+        opacity: 0.0;
         width: 50vmin;
         height: 50vmin;
-    }
-}
-@media (max-width: 1600px) {
-    .moviesContainer h1 {
-        font-size: 2rem;
-    }
-    .moviesContainer h1::before, .moviesContainer h1::after {
-        height: .3rem;
-    }
-    .moviesContainer .movie-card .movie-details h2 {
-        border-bottom: var(--primary) dotted .2rem;
-        font-size: 1.3rem;
-    }
-    .moviesContainer .movie-card .movie-details  {
-        font-size: 1rem;
-        line-height: 1rem;
-    }
-}
-@media (max-width: 1200px) {
-    .moviesContainer h1 {
-        font-size: 1.5rem;
-    }
-    .moviesContainer h1::before, .moviesContainer h1::after {
-        height: .15rem;
-    }
-    .moviesContainer .movie-card .movie-details h2 {
-        border-bottom: var(--primary) dotted .15rem;
-        font-size: 1rem;
-    }
-    .moviesContainer .movie-card .movie-details  {
-        font-size: .8rem;
-        line-height: .8rem;
-    }
-    .moviesContainer .movie-card .movie-details {
-        gap: 10px
-    }
-    .moviesContainer .movie-card .movie-details p:not(.summary) span:nth-child(2){
-        border-bottom: .15rem var(--secondary) solid;
-    }
-}
-@media (max-width: 998.91px) {
-    .moviesContainer h1 {
-        font-size: 1rem;
-    }
-    .moviesContainer h1::before, .moviesContainer h1::after {
-        width: 30px;
-        height: .15rem;
-    }
-    .moviesContainer h1::before {
-        margin: 0 10px 5px 0;
-    }
-    .moviesContainer h1::after {
-        margin: 0 0 5px 10px;
-    } 
-    .moviesContainer .movie-card .movie-details h2 {
-        font-size: .8rem;
-    }
-    .moviesContainer .movie-card .movie-details  {
-        font-size: .6rem;
-        line-height: .6rem;
-    }
-    .moviesContainer .movie-card .movie-details p:not(.summary) span:nth-child(2){
-        border-bottom: .1rem var(--secondary) solid;
-    }
-}
-@media (max-width: 800px) {
-    .moviesContainer .movie-card {
-        display: flex;
-        max-width: calc(3/4*100%);
-    }
-    .moviesContainer .movie-card .movie-details h2 {
-        font-size: .6rem;
-    }
-    .moviesContainer .movie-card .movie-details  {
-        font-size: .5rem;
-        line-height: .5rem;
-    }
-}
-@media (max-width: 700px) {
-    .moviesContainer .movie-card{
-        flex-direction: column;
-    }
-
-}
-@media (max-width: 350px) {
-    .moviesContainer .movie-card img{
-        height: 50vh;
     }
 }

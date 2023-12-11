@@ -1,2 +1,2 @@
-Harry Potter Gallery
+Harry Potter Gallery |
 Only movies till now
